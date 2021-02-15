@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/docker/docker/api/types"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/caddyfile"
+	"github.com/suchwerk/caddy-docker-proxy/plugin/v2/caddyfile"
 )
 
 func (g *CaddyfileGenerator) getContainerCaddyfile(container *types.Container, logsBuffer *bytes.Buffer) (*caddyfile.Container, error) {

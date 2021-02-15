@@ -9,9 +9,9 @@ import (
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/network"
 	"github.com/docker/docker/api/types/swarm"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/config"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/docker"
 	"github.com/stretchr/testify/assert"
+	"github.com/suchwerk/caddy-docker-proxy/plugin/v2/config"
+	"github.com/suchwerk/caddy-docker-proxy/plugin/v2/docker"
 )
 
 var caddyContainerID = "container-id"
