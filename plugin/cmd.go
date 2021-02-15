@@ -11,8 +11,8 @@ import (
 
 	"github.com/caddyserver/caddy/v2"
 	caddycmd "github.com/caddyserver/caddy/v2/cmd"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/config"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/generator"
+	"github.com/suchwerk/caddy-docker-proxy/plugin/v2/config"
+	"github.com/suchwerk/caddy-docker-proxy/plugin/v2/generator"
 )
 
 var isTrue = regexp.MustCompile("(?i)^(true|yes|1)$")
@@ -66,7 +66,8 @@ func cmdFunc(flags caddycmd.Flags) (int, error) {
 
 		caddy.Run(&caddy.Config{
 			Admin: &caddy.AdminConfig{
-				Listen: getAdminListen(options),
+				Listen:  "0.0.0.0:2019", // getAdminListen(options),
+				Origins: []string{"*"},
 			},
 		})
 	}
